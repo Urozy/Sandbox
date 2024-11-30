@@ -13,7 +13,7 @@ void Gamefield::setBoard(vector<vector<int>> newBoard) {
 
 void Gamefield::createBoard() {
     board = vector<vector<int>>(4, vector<int>(4, '='));
-    cout << "Èãðà íà÷àëàñü\n" << endl;
+    cout << "Игра началась\n" << endl;
 }
 
 void Gamefield::fillBoardRandomly() {
@@ -46,7 +46,7 @@ void Gamefield::printBoard() {
 void Gamefield::SymbolSwap(vector<vector<int>>& array, int row1, int col1, int row2, int col2) {
     if (row1 < 0 || row1 >= 4 || col1 < 0 || col1 >= 4
         || row2 < 0 || row2 >= 4 || col2 < 0 || col2 >= 4) {
-        cout << "\n" << "Ïîõîæå âû âûøëè çà ðàìêè èãðîâîãî ïîëÿ, ïîïðîáóéòå åùå ðàç\n" << endl;
+        cout << "\n" << "Похоже вы вышли за рамки игрового поля, попробуйте еще раз\n" << endl;
 
     }
     else {
@@ -70,10 +70,10 @@ void Gamefield::GameProcess() {
 
                 if (board[i][j] == 0) {
                     int d;
-                    cout << "Âûáåðåòå--1 åñëè õîòèòå ïåðåäâèíóòü ÷èñëî ñíèçó íà ïóñòîå ìåñòî\n"
-                        << "Âûáåðåòå--2 åñëè õîòèòå ïåðåäâèíóòü ÷èñëî ñâåðõó íà ïóñòîå ìåñòî\n"
-                        << "Âûáåðåòå--3 åñëè õîòèòå ïåðåäâèíóòü ÷èñëî ñïðàâà íà ïóñòîå ìåñòî\n"
-                        << "Âûáåðåòå--4 åñëè õîòèòå ïåðåäâèíóòü ÷èñëî ñëåâî íà ïóñòîå ìåñòî\n"
+                    cout << "Выберете--1 если хотите передвинуть число снизу на пустое место\n"
+                        << "Выберете--2 если хотите передвинуть число сверху на пустое место\n"
+                        << "Выберете--3 если хотите передвинуть число справа на пустое место\n"
+                        << "Выберете--4 если хотите передвинуть число слево на пустое место\n"
                         << "\n" << endl;
                     cin >> d;
                     switch (d) {
@@ -98,7 +98,7 @@ void Gamefield::GameProcess() {
                         printBoard();
                         break;
                     default:
-                        cout << "Íåêîððåêòíûé ââîä" << endl;
+                        cout << "Некорректный ввод" << endl;
                         break;
                     }
                 }
@@ -107,7 +107,7 @@ void Gamefield::GameProcess() {
 
     }
     cout << endl;
-    cout << "Ïàçë ñîáðàí" << endl;
+    cout << "Пазл собран" << endl;
 };
 
 
