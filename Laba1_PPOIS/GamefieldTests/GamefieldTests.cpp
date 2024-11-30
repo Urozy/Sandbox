@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "C:\Visualstudio 2 курс\Ppoislab1\Ppoislab1\GameUI.cpp"
+#include "C:\Visualstudio 2 ГЄГіГ°Г±\Ppoislab1\Ppoislab1\GameUI.cpp"
 
 
 TEST(GamefieldTest, CreateBoardTest) {
